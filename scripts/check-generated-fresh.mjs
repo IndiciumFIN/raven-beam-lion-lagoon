@@ -33,6 +33,8 @@ const sha = (p) => createHash("sha256").update(readFileSync(p)).digest("hex");
  */
 const ALVOS = [
   { arquivo: "contracts/entities/clinical-tools.v1.json", gerador: "scripts/generate-entity-contracts.mjs" },
+  { arquivo: "contracts/entities/tool-sources.v1.json", gerador: "scripts/generate-entity-contracts.mjs" },
+  { arquivo: "contracts/entities/tool-bindings.v1.json", gerador: "scripts/generate-entity-contracts.mjs" },
   { arquivo: "contracts/entities/routes.v1.json", gerador: "scripts/generate-entity-contracts.mjs" },
   { arquivo: "contracts/entities/components.v1.json", gerador: "scripts/generate-entity-contracts.mjs" },
   { arquivo: "contracts/entities/design-tokens.v1.json", gerador: "scripts/generate-entity-contracts.mjs" },
