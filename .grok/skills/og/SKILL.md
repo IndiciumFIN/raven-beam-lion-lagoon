@@ -77,7 +77,11 @@ a brand warning while it runs is never a cue to redo its work.
 **No `task` tool? Then you are the pass** — build the assets now; nothing else will. Whoever runs it claims
 that marker, stages files under `/workspace/.grok/` — never inside `public/`, which `vite build` copies
 verbatim into the deployed app — hands it over with `scripts/write-atomic.mjs` so no build reads half a JPEG,
-and self-checks with `node scripts/brand-check.mjs --game`.
+and self-checks using the standalone command below:
+
+```sh
+node scripts/brand-check.mjs --game
+```
 
 ## Build the assets — the pass reads these, the parent does not
 
