@@ -45,3 +45,26 @@ test("duplicate canonical IDs are rejected",()=>{
  const x=fixture();x.fields[0].canonical_id="SRC-A";
  assert.ok(inspectCanonicalLineage(x).errors.some(e=>e.code==="DUPLICATE_CANONICAL_ID"));
 });
+
+test("EVIDENCE_BOUND is rejected when the governing binding or field lacks atom evidence", () => {
+  const x = fixture();
+  x.bindings[0].status = "EVIDENCE_BOUND";
+  x.bindings[0].evidence_bundle_ids = [];
+  x.fields[0].status = "EVIDENCE_BOUND";
+  const r = inspectCanonicalLineage(x);
+  assert.ok(r.errors.some(e => e.code === "BINDING_EVIDENCE_STATUS_WITHOUT_BUNDLE"));
+  assert.ok(r.errors.some(e => e.code === "FIELD_EVIDENCE_STATUS_WITHOUT_BUNDLE"));
+  assert.ok(r.holds.some(e => e.code === "BINDING_WITHOUT_ATOM_EVIDENCE"));
+  assert.notEqual(r.releaseGate, "EVIDENCE_NOT_RELEASE_AUTHORIZATION");
+});
+
+test("HOLD_HUMAN avoids ungrounded evidence status without granting clinical release", () => {
+  const x = fixture();
+  x.bindings[0].status = "HOLD_HUMAN";
+  x.bindings[0].evidence_bundle_ids = [];
+  x.fields[0].status = "HOLD_HUMAN";
+  const r = inspectCanonicalLineage(x);
+  assert.equal(r.errors.some(e => e.code === "BINDING_EVIDENCE_STATUS_WITHOUT_BUNDLE"), false);
+  assert.equal(r.errors.some(e => e.code === "FIELD_EVIDENCE_STATUS_WITHOUT_BUNDLE"), false);
+  assert.ok(r.holds.some(e => e.code === "BINDING_WITHOUT_ATOM_EVIDENCE"));
+});
