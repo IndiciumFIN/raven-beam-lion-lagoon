@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { readdir, readFile } from "node:fs/promises";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 import { PGlite } from "@electric-sql/pglite";
 import { auditPlatformConclusion } from "../core/compliance/platform-conclusion.ts";
 
@@ -11,7 +12,7 @@ test("todo arquivo rastreado tem amarração e só o token congelado é canônic
   const names = (await readdir(base)).filter((name) => name.endsWith(".sql")).sort();
   for (const name of names) await db.exec(await readFile(new URL(name, base), "utf8"));
 
-  const tracked = execFileSync("git", ["-C", "/workspace", "ls-files", "-s"], { encoding: "utf8" })
+  const tracked = execFileSync("git", ["-C", fileURLToPath(new URL("../../", import.meta.url)), "ls-files", "-s"], { encoding: "utf8" })
     .split("\n")
     .filter((line) => line.length > 0)
     .map((line) => {
