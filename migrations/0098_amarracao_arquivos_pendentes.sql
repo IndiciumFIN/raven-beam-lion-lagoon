@@ -211,5 +211,6 @@ insert into file_binding (path, kind, alvo, canonico, anterior_ds) values
   ('scripts/reconciliacao-workspace.test.mjs', 'arquivo', 'suporte', false, false),
   ('scripts/verify-bibliotecas-stage-order.test.mjs', 'arquivo', 'suporte', false, false),
   ('scripts/verify-repository-integrity.py', 'arquivo', 'suporte', false, false),
-  ('src/lib/tools/dimensionamento.ts', 'arquivo', 'suporte', false, false)
+  ('src/lib/tools/dimensionamento.ts', 'arquivo', 'suporte', false, false),
+  ('audit/branch-canonicalization/ncos-route-current-sha-observation-20261114.v1.json', 'arquivo', 'suporte', false, false)
 on conflict (path) do nothing;
