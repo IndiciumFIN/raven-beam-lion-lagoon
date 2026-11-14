@@ -11,7 +11,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-ALDRETE-ATIVIDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -33,7 +33,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-ALDRETE-RESPIRACAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -55,7 +55,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-ALDRETE-CIRCULACAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -77,7 +77,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-ALDRETE-CONSCIENCIA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -99,7 +99,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-ALDRETE-SATURACAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -121,7 +121,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-ALDRETE-BAND-OK",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -143,7 +143,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-ALDRETE-BAND-WARN",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -165,7 +165,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-ALDRETE-BAND-DANGER",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -187,7 +187,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-SENSORIAL",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -209,7 +209,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-UMIDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -231,7 +231,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-ATIVIDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -253,7 +253,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-MOBILIDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -275,7 +275,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-NUTRICAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -297,7 +297,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-FRICCAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -319,7 +319,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-BAND-MUITOALTO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -341,7 +341,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-BAND-ALTO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -363,7 +363,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-BAND-MODERADO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -385,7 +385,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-BAND-BAIXO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -407,7 +407,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-BRADEN-BAND-SEMRISCO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -429,7 +429,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-QUEDAS",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -451,7 +451,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-DIAGNOSTICO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -473,7 +473,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-AUXILIO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -495,7 +495,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-VENOSO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -517,7 +517,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-MARCHA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -539,7 +539,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-MENTAL",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -561,7 +561,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-BAND-BAIXO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -583,7 +583,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-BAND-MEDIO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -605,7 +605,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-MORSE-BAND-ALTO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -627,7 +627,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-APGAR-APARENCIA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -649,7 +649,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-APGAR-PULSO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -671,7 +671,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-APGAR-REFLEXO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -693,7 +693,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-APGAR-TONUS",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -715,7 +715,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-APGAR-COR",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -737,7 +737,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-APGAR-BAND-NORMAL",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -759,7 +759,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-APGAR-BAND-DEPRESSAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -781,7 +781,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-APGAR-BAND-GRAVE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -803,7 +803,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-GOTEJAMENTO-VOLUME",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-GOTEJAMENTO-FORMULA-CLASSICA"
@@ -825,7 +825,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-GOTEJAMENTO-HORAS",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-GOTEJAMENTO-FORMULA-CLASSICA"
@@ -847,7 +847,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-GOTEJAMENTO-MINUTOS",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-GOTEJAMENTO-FORMULA-CLASSICA"
@@ -869,7 +869,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-GOTEJAMENTO-FATOR",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-GOTEJAMENTO-FORMULA-CLASSICA"
@@ -891,7 +891,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-IMC-PESO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-OMS-OBESIDADE-2000"
@@ -913,7 +913,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-IMC-ALTURA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-OMS-OBESIDADE-2000"
@@ -6689,7 +6689,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-CTX-NOME",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "CKO-POL-UT-001@1.2.0"
@@ -6709,7 +6709,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-CTX-IDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "CKO-POL-UT-001@1.2.0"
@@ -6729,7 +6729,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-CTX-SETOR",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "CKO-POL-UT-001@1.2.0"
@@ -6749,7 +6749,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "AB-CTX-DATA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "CKO-POL-UT-001@1.2.0"
@@ -6769,7 +6769,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-ALDRETE-ATIVIDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -6786,7 +6786,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-ALDRETE-RESPIRACAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -6803,7 +6803,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-ALDRETE-CIRCULACAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -6820,7 +6820,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-ALDRETE-CONSCIENCIA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -6837,7 +6837,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-ALDRETE-SATURACAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CFM-PARECER-28-2020"
@@ -6854,7 +6854,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-BRADEN-SENSORIAL",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -6871,7 +6871,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-BRADEN-UMIDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -6888,7 +6888,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-BRADEN-ATIVIDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -6905,7 +6905,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-BRADEN-MOBILIDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -6922,7 +6922,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-BRADEN-NUTRICAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -6939,7 +6939,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-BRADEN-FRICCAO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-REV-ENF-USP-BRADEN-1999"
@@ -6956,7 +6956,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-MORSE-QUEDAS",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -6973,7 +6973,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-MORSE-DIAGNOSTICO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -6990,7 +6990,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-MORSE-AUXILIO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -7007,7 +7007,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-MORSE-VENOSO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -7024,7 +7024,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-MORSE-MARCHA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -7041,7 +7041,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-MORSE-MENTAL",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-CAPES-MEC-MANUAL-CONSULTA-RAPIDA"
@@ -7058,7 +7058,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-APGAR-APARENCIA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -7075,7 +7075,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-APGAR-PULSO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -7092,7 +7092,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-APGAR-REFLEXO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -7109,7 +7109,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-APGAR-TONUS",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -7126,7 +7126,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-APGAR-COR",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-APGAR-1953"
@@ -7143,7 +7143,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-GOTEJAMENTO-VOLUME",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-GOTEJAMENTO-FORMULA-CLASSICA"
@@ -7161,7 +7161,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-GOTEJAMENTO-HORAS",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-GOTEJAMENTO-FORMULA-CLASSICA"
@@ -7179,7 +7179,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-GOTEJAMENTO-MINUTOS",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-GOTEJAMENTO-FORMULA-CLASSICA"
@@ -7197,7 +7197,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-GOTEJAMENTO-FATOR",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-GOTEJAMENTO-FORMULA-CLASSICA"
@@ -7214,7 +7214,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-IMC-PESO",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-OMS-OBESIDADE-2000"
@@ -7232,7 +7232,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-IMC-ALTURA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "SRC-OMS-OBESIDADE-2000"
@@ -7250,7 +7250,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-CTX-NOME",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "CKO-POL-UT-001@1.2.0"
@@ -7267,7 +7267,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-CTX-IDADE",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "CKO-POL-UT-001@1.2.0"
@@ -7284,7 +7284,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-CTX-SETOR",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "CKO-POL-UT-001@1.2.0"
@@ -7301,7 +7301,7 @@
       "schema_version": "0.1.0",
       "canonical_id": "FD-CTX-DATA",
       "version": "1.2.0",
-      "status": "EVIDENCE_BOUND",
+      "status": "HOLD_HUMAN",
       "updated_at": "2026-10-22",
       "provenance_refs": [
         "CKO-POL-UT-001@1.2.0"
