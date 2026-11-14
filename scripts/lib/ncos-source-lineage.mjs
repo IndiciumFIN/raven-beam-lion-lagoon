@@ -12,6 +12,7 @@ export function inspectCanonicalLineage({ sources, bindings, fields, tools, edit
   };
   const sourceIds = new Set(sources.map(s=>s.canonical_id));
   const bindingIds = new Set(bindings.map(b=>b.canonical_id));
+  const bindingById = new Map(bindings.map(b=>[b.canonical_id,b]));
   const fieldIds = new Set(fields.map(f=>f.canonical_id));
   const supportedValues = (schema, key) => schema?.properties?.[key]?.enum || null;
   function checkSchema(item, schema, id) {
@@ -54,8 +55,11 @@ export function inspectCanonicalLineage({ sources, bindings, fields, tools, edit
     }
     if (!b.validity?.applicable_from)
       finding(holds,"BINDING_VALIDITY_INCOMPLETE",id,"applicable_from");
-    if (!b.evidence_bundle_ids?.length)
+    if (!b.evidence_bundle_ids?.length) {
       finding(holds,"BINDING_WITHOUT_ATOM_EVIDENCE",id,b.field_path||"");
+      if (b.status === "EVIDENCE_BOUND")
+        finding(errors,"BINDING_EVIDENCE_STATUS_WITHOUT_BUNDLE",id,b.field_path||"");
+    }
   }
   for (const f of fields) {
     const id=f.canonical_id;addNode(id,"field_definition");checkSchema(f,schemas.field,id);
@@ -63,6 +67,10 @@ export function inspectCanonicalLineage({ sources, bindings, fields, tools, edit
       finding(errors,"FIELD_AUTHORITY_NOT_FOUND",id,String(f.authority_binding_ref));
     else edges.push({from:f.authority_binding_ref,to:id,relation:"authority_binding_ref",kind:"BINDING_FIELD_DEFINITION"});
     if (!f.semantic_concept_ref) finding(holds,"FIELD_SEMANTIC_CONCEPT_MISSING",id,f.field_path||"");
+    // Field status cannot claim evidence already bound when its governing
+    // authority binding has no verified atom/evidence bundle identifier.
+    if (f.status === "EVIDENCE_BOUND" && !bindingById.get(f.authority_binding_ref)?.evidence_bundle_ids?.length)
+      finding(errors,"FIELD_EVIDENCE_STATUS_WITHOUT_BUNDLE",id,String(f.authority_binding_ref));
   }
   for (const t of tools) {
     const id=t.id;addNode(id,"clinical_tool");
