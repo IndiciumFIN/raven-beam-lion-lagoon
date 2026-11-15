@@ -22,10 +22,20 @@ jobs:
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: "22"
+      - name: Install locked dependencies for runtime instrument assertions
+        run: npm ci
       - name: Validate negative examples for normative and editorial evidence
         run: node --test scripts/ncos-source-lineage.test.mjs
+      - name: Test deterministic field-by-field remediation queue (no admissions)
+        run: node --test scripts/ncos-binding-review-queue.test.mjs
       - name: Generate field-by-field CKO vocabulary drift proposal without rewriting source
         run: node scripts/ncos-cko-schema-drift.mjs
+      - name: Reject auto-approval of externally found bibliographic sources
+        run: node --test scripts/ncos-external-source-candidates.test.mjs
+      - name: Reject unreviewed Fugulin SOFA2 and Waterlow instrument version or rights changes
+        run: node --test scripts/ncos-clinical-version-risk.test.mjs
+      - name: Derive external reference leads for field review, without rewriting CKO sources
+        run: node scripts/ncos-external-source-candidates.mjs --enforce-research-coverage
       - name: Reconcile actual CKO source-first evidence and fail closed
         run: node scripts/ncos-source-lineage-audit.mjs --enforce
       - name: Retain candidate lineages and blockers even if gate fails

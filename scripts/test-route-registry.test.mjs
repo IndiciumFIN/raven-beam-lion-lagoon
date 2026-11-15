@@ -155,3 +155,37 @@ test("publicPaths() deriva do registry, nao de lista propria", () => {
   assert.match(bloco, /indexablePaths\(\)/, "publicPaths() tem de chamar o registry");
   assert.doesNotMatch(bloco, /listSections|articleSlugs|tools\.map/, "publicPaths() nao pode montar lista propria");
 });
+
+test("NCOS: a reconciliação de 53 rotas não aprova os 20 snapshots históricos", () => {
+  const current = JSON.parse(readFileSync(resolve(root,
+    "audit/branch-canonicalization/ncos-route-current-sha-observation-20261114.v1.json"), "utf8"));
+  const original = JSON.parse(readFileSync(resolve(root,
+    "audit/branch-canonicalization/ncos-route-source-crosswalk-unregistered-20261113.v1.json"), "utf8"));
+  const backup = JSON.parse(readFileSync(resolve(root,
+    "registers/canonical/surface-contracts.v2.json"), "utf8"));
+  assert.equal(current.documentType, "NCOS_CURRENT_ROUTE_SHA_OBSERVATION_CANDIDATE");
+  assert.equal(current.releaseReady, false);
+  assert.equal(current.approvalStatus, "HOLD_ROLE_TEMPLATE_AND_ISOLATION");
+  assert.equal(current.legacyBackupScope, "CE_PUBLIC_BACKUP_ONLY");
+  assert.equal(current.routes.length, 53);
+  assert.equal(Object.keys(backup.entries).length, 53);
+  assert.equal(original.sources.length, 20);
+  assert.equal(new Set(current.routes.map(r => r.file)).size, 53);
+  assert.equal(current.routes.filter(r => r.sourceChangedSinceHistorical === true).length, 18);
+  for (const row of current.routes) {
+    assert.equal(row.roleReview, "HOLD_ROLE_REVIEW");
+    assert.equal(row.templateReview, "HOLD_TEMPLATE_REVIEW");
+    assert.equal(row.releaseApproval, false);
+    assert.ok(backup.entries[row.file], "missing legacy backup identity: " + row.file);
+  }
+  const output = execFileSync(process.execPath, ["scripts/check-ncos-route-crosswalk.mjs"],
+    { cwd: root, encoding: "utf8" });
+  assert.match(output, /PASS_SOURCE_INVENTORY_WITH_ROLE_HOLD/);
+  assert.match(output, /HOLD_ROLE_TEMPLATE_REVIEW; no publication approval/);
+  const audit = JSON.parse(readFileSync(resolve(root,
+    "audit-evidence/ncos-route-behavior-check.v1.json"), "utf8"));
+  assert.equal(audit.summary.authorizationApprovals, 0);
+  assert.equal(audit.summary.findings, 0);
+  assert.equal(audit.releaseGate, "BLOCKED");
+  assert.equal(audit.databaseAuthorization, "HOLD_RLS_RBAC_MIGRATIONS");
+});

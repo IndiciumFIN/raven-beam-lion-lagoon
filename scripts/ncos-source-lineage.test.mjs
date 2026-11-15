@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { inspectCanonicalLineage } from "./lib/ncos-source-lineage.mjs";
 function fixture(){
   const common={schema_version:"0.1.0",status:"DRAFT",version:"1",updated_at:"2026-11-13",provenance_refs:["local-check"]};
@@ -44,4 +45,47 @@ test("editorial content requires per-module provenance and cannot be silently a 
 test("duplicate canonical IDs are rejected",()=>{
  const x=fixture();x.fields[0].canonical_id="SRC-A";
  assert.ok(inspectCanonicalLineage(x).errors.some(e=>e.code==="DUPLICATE_CANONICAL_ID"));
+});
+
+test("EVIDENCE_BOUND is rejected when the governing binding or field lacks atom evidence", () => {
+  const x = fixture();
+  x.bindings[0].status = "EVIDENCE_BOUND";
+  x.bindings[0].evidence_bundle_ids = [];
+  x.fields[0].status = "EVIDENCE_BOUND";
+  const r = inspectCanonicalLineage(x);
+  assert.ok(r.errors.some(e => e.code === "BINDING_EVIDENCE_STATUS_WITHOUT_BUNDLE"));
+  assert.ok(r.errors.some(e => e.code === "FIELD_EVIDENCE_STATUS_WITHOUT_BUNDLE"));
+  assert.ok(r.holds.some(e => e.code === "BINDING_WITHOUT_ATOM_EVIDENCE"));
+  assert.notEqual(r.releaseGate, "EVIDENCE_NOT_RELEASE_AUTHORIZATION");
+});
+
+test("HOLD_HUMAN avoids ungrounded evidence status without granting clinical release", () => {
+  const x = fixture();
+  x.bindings[0].status = "HOLD_HUMAN";
+  x.bindings[0].evidence_bundle_ids = [];
+  x.fields[0].status = "HOLD_HUMAN";
+  const r = inspectCanonicalLineage(x);
+  assert.equal(r.errors.some(e => e.code === "BINDING_EVIDENCE_STATUS_WITHOUT_BUNDLE"), false);
+  assert.equal(r.errors.some(e => e.code === "FIELD_EVIDENCE_STATUS_WITHOUT_BUNDLE"), false);
+  assert.ok(r.holds.some(e => e.code === "BINDING_WITHOUT_ATOM_EVIDENCE"));
+});
+
+test("gotejamento: COREN-SP source locator exists but rights and byte-integrity stay HOLD", () => {
+  const sources = JSON.parse(readFileSync("contracts/entities/tool-sources.v1.json", "utf8")).items;
+  const source = sources.find(s => s.canonical_id === "SRC-GOTEJAMENTO-FORMULA-CLASSICA");
+  assert.ok(source);
+  assert.equal(source.authority, "COREN-SP");
+  assert.match(source.locator.uri, /^https:\/\/biblioteca\.cofen\.gov\.br\/.*calculo-e-diluicao-de-medicamentos\.pdf$/);
+  assert.match(source.locator.pinpoint, /p\. 17/);
+  assert.equal(source.rights, "RESTRICTED");
+  assert.equal(source.license_ref, "PERMISSION_REVIEW");
+  assert.equal(source.integrity.sha256, "0".repeat(64));
+  assert.equal(source.integrity.snapshot_ref, "PENDING_SNAPSHOT");
+  assert.equal(source.status, "REVIEW_REQUIRED");
+  const x = fixture();
+  x.sources.push(source);
+  const result = inspectCanonicalLineage(x);
+  assert.ok(result.holds.some(h => h.entity === source.canonical_id && h.code === "SOURCE_INTEGRITY_NOT_VERIFIED"));
+  assert.ok(result.holds.some(h => h.entity === source.canonical_id && h.code === "SOURCE_USE_RIGHTS_REQUIRE_REVIEW"));
+  assert.equal(result.errors.some(e => e.entity === source.canonical_id && e.code === "SOURCE_PINPOINT_MISSING"), false);
 });

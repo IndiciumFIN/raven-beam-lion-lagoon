@@ -653,7 +653,7 @@ export const contractToolSources = [
   },
   {
     "canonical_id": "SRC-GOTEJAMENTO-FORMULA-CLASSICA",
-    "authority": "Prática assistencial de gotejamento",
+    "authority": "COREN-SP",
     "jurisdiction": "BR",
     "source_type": "STANDARD"
   }

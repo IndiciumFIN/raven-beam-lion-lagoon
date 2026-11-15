@@ -1,0 +1,554 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "NCOS_CURRENT_ROUTE_SHA_OBSERVATION_CANDIDATE",
+  "authority": "READ_ONLY_GIT_TREE_NOT_ROLE_OR_PUBLICATION_AUTHORITY",
+  "sourceTreeCommit": "7928f22a471300ebc9bbe816332ba9b1add53977",
+  "historicalCrosswalkPath": "audit/branch-canonicalization/ncos-route-source-crosswalk-unregistered-20261113.v1.json",
+  "historicalSourceCommit": "7ed49913c49f01ed4d524800246fa113068e18cc",
+  "legacyBackupPath": "registers/canonical/surface-contracts.v2.json",
+  "legacyBackupScope": "CE_PUBLIC_BACKUP_ONLY",
+  "legacyBackupBlobSha": "c46c73cb228e2eccdb3b668317396634390622d1",
+  "approvalStatus": "HOLD_ROLE_TEMPLATE_AND_ISOLATION",
+  "releaseReady": false,
+  "summary": {
+    "routeFiles": 53,
+    "legacyBackupEntries": 53,
+    "historicalSourceEntries": 20,
+    "historicalSameBlob": 2,
+    "historicalDriftedBlob": 18,
+    "authorizedRoutes": 0
+  },
+  "routes": [
+    {
+      "file": "__root.tsx",
+      "gitBlobSha": "a9102f7f04612218762666638244dcc6168e8aad",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "$.tsx",
+      "gitBlobSha": "e0f85c0f205c143c140c1c8a03e245cbaa245654",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "e0f85c0f205c143c140c1c8a03e245cbaa245654",
+      "sourceChangedSinceHistorical": false,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "admin.tsx",
+      "gitBlobSha": "6cdb8cb22f01113473a1799d760b6fb4a20f21ed",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "album.tsx",
+      "gitBlobSha": "bb5a9a68fe929b2951b47097a8de3ddfa3c6205a",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "67746bc62086bc2e5516cabc753c885fcc25ddc8",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "api/auth/$.ts",
+      "gitBlobSha": "e5dbc1a83b9ff81477719b6164fe8e6ed33b312a",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "assinante.ferramentas.$slug.tsx",
+      "gitBlobSha": "625dbf6627c603ddd2e3c27b3e2c9e9153baa7fc",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "assinante.tsx",
+      "gitBlobSha": "fd6420fc8002fff9d924d8faa695017cffac0c59",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "bibliotecas.$slug.$object.tsx",
+      "gitBlobSha": "391a7b823f06a4843888033b14197200edc2ddfb",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "bibliotecas.$slug.index.tsx",
+      "gitBlobSha": "a3a18c7e6f1d4ac0b2dca0149fc8543a84345e03",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "bibliotecas.$slug.tsx",
+      "gitBlobSha": "1de7b91812cb27c582d1c4de24f3bc7116aeea8c",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "bibliotecas.index.tsx",
+      "gitBlobSha": "58d6530e1815fe009c5ce610aed34a699a90a410",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "blog.$slug.tsx",
+      "gitBlobSha": "e28aa752b22fe29752473411e78eec5595e1b1b9",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "blog.index.tsx",
+      "gitBlobSha": "c9f9ec2c5205e614b1b757670d0ca1d6472a07f6",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "blog.mary-eliza-mahoney.tsx",
+      "gitBlobSha": "cff76779f8044a2f4b8ede5a133b4a337479b3dd",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "cff76779f8044a2f4b8ede5a133b4a337479b3dd",
+      "sourceChangedSinceHistorical": false,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "bolsas.tsx",
+      "gitBlobSha": "7bd67f8cb787cc31094468c58aabd6c71f61f9dd",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "dcf040d2c4539b51a51fa2308c7117eeeec0dd7f",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "calculadoras-trabalhistas.tsx",
+      "gitBlobSha": "a79db365a7de0af8979bd57925d68ec4696e95ce",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "f76141f9897fbaab7a6337925878eae56698b5ea",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "central-comando.tsx",
+      "gitBlobSha": "a56e8d445d7a30e054f7914c5db335a437bab2a5",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "concurso.tsx",
+      "gitBlobSha": "f1036bcbe6aeaefabd1470035ef7b9c7caa3d632",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "362258cbf663c1874779d694dd00b6004d7c1c09",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "concursos.tsx",
+      "gitBlobSha": "d5a9f087042b8d53977fb794b30ab6149dbf114d",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "bafe351ece1938ef391e122c62e7e9c3ceb60f88",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "conta.tsx",
+      "gitBlobSha": "d755b3093f790e48f42488b31d46ef5bc3b26738",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "curiosidades.tsx",
+      "gitBlobSha": "88b5451b949255493e4a17bfed3611c0f1478469",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "09ba9129075b72aade3501108d2458a19353172d",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "cursos-sus.tsx",
+      "gitBlobSha": "57a4c0f93f79604bd265ea9a7f722ba46cc15340",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "9b1312dae0231f40b79a54d57c1280c263a071e7",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "doencas-compulsorias.tsx",
+      "gitBlobSha": "d5009c9ab9fa4530e13d11ce741e6e2daf6f77f8",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "f2f1cca38f0f65471e15d37926b76e4d7c90d22e",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "estudo.tsx",
+      "gitBlobSha": "68c1a8ae1f7698c4c04c8b3dd077ea7889b50846",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "a397cbbedc766cab00678e24da8edca582771d3c",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "exames-laboratoriais.tsx",
+      "gitBlobSha": "4d615c004cb10df811d666e662ff6889d1ec256f",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "652dcfcd637d7be6298eb24507eb8b79ff1e6cbe",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "ferramentas-pesquisa.tsx",
+      "gitBlobSha": "201056b075696e62ed87ec6ff89b48f4bfc7caa9",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "94b0e7f564c10e16f6496fb8612f81cad6498370",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "ferramentas.$slug.tsx",
+      "gitBlobSha": "ef9d33dd77fee4e46ca22263deebcca761c96c2e",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "forum.tsx",
+      "gitBlobSha": "0fe92548906f9d8b804ba68f1a0275d78210d4e8",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "c6bae1531766b04cc1020d642aafc89c8f600747",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "index.tsx",
+      "gitBlobSha": "ba930b56f98680a136daa66478a02eb49355769f",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "institucional.$hub.$page.tsx",
+      "gitBlobSha": "b4000c78fe0ae79bcb75196cd153fca4cab6d84b",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "institucional.$hub.index.tsx",
+      "gitBlobSha": "ddab89d6e40c544deefa503d471cde6223feba85",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "institucional.$hub.tsx",
+      "gitBlobSha": "e0a0ff4d1ba5bcdba4713224e451552eb61c7cfb",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "institucional.index.tsx",
+      "gitBlobSha": "0aa26ab733e2ed3119853c79c2ff07c2855850f1",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "institucional.tsx",
+      "gitBlobSha": "40f338d830687ef0cec5208c57505bdfde9e839f",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "kids.$section.tsx",
+      "gitBlobSha": "e2fa4e6fdf586509627147069e641dd62e84e4cc",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "kids.colorir.tsx",
+      "gitBlobSha": "9e160e98273017c0e9a566a0f4b62749814bafc8",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "46f8535550ce6e5b1f3eb50079b67f0df2e97714",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "kids.index.tsx",
+      "gitBlobSha": "6adf70249f030911b857495f7d81bae4169fe2bd",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "kids.jogos.tsx",
+      "gitBlobSha": "40263ab46e4793f7d6b25ae0701f972f2f05a9c5",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "b8b53efb2ca70a3e15feba7db024d15e6c5a0161",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "kids.tsx",
+      "gitBlobSha": "19115506d0a9a1c731ff2d5cf01cba8f68c0f041",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "login.tsx",
+      "gitBlobSha": "d34ddfbc6ff05bdf94ba3baffc6df79fa63c09c5",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "modelos.$id.tsx",
+      "gitBlobSha": "f602c62d1dd62c738cd094e3243ed56b7f9dc5c5",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "modelos.index.tsx",
+      "gitBlobSha": "e9498ce7a94d7d38728286e896aba81f0ec186d3",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "modelos.tsx",
+      "gitBlobSha": "3bb19d32fcb3abebc288b58caad08e7a98618d88",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "oficina-local.tsx",
+      "gitBlobSha": "7c6bca88c0838bd98240a739660baa2c2c269752",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "oportunidades.tsx",
+      "gitBlobSha": "5bf8ff881834fd6e4b690686a4a54a46f6ad3a27",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "21ba85692c601b904d6d39538e5992384dae70cd",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "pacote.tsx",
+      "gitBlobSha": "f21938479cee6c574079a6735442bfd0a89a17c4",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "residencias.tsx",
+      "gitBlobSha": "93ead56b74ac91a37182e3b7a6a9a05302978f52",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "cded6062a99d4030d9d406fbb71adda0141e1ee2",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "sbar.tsx",
+      "gitBlobSha": "3fd8b19ec3e0b33a0c637d16f60e9a4da94191aa",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "4d37fa6a9c877d4409958f73dd807fe5bbe9df16",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "secao.$slug.tsx",
+      "gitBlobSha": "3d6aa9672fd3fccdd36fa02bd7c716eba71f4925",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "sessao.tsx",
+      "gitBlobSha": "8a1b13b2caca3a3b36343d25b5a9c90eca30d1c4",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "sistema.tsx",
+      "gitBlobSha": "6d4e98eb502484fc7c9f81bdacd974b0cd54a065",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "vagas.tsx",
+      "gitBlobSha": "bafbba92377e0b277b7ecb18fbd455dbd601ff40",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": "91a76fe17d2cd726e0a31b8272b5361d8e41e38a",
+      "sourceChangedSinceHistorical": true,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    },
+    {
+      "file": "viladocuidado.tsx",
+      "gitBlobSha": "0b4a53f0ef7546598f9344c3645c885bfd2a8231",
+      "legacyBackupEntryPresent": true,
+      "historicalSourceBlobSha": null,
+      "sourceChangedSinceHistorical": null,
+      "roleReview": "HOLD_ROLE_REVIEW",
+      "templateReview": "HOLD_TEMPLATE_REVIEW",
+      "releaseApproval": false
+    }
+  ],
+  "historicalCrosswalkBlobSha": "b02ab3c80c7a734a754fb55ada5924abd1543ff4"
+}

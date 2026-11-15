@@ -8,6 +8,7 @@ import { readFileSync, readdirSync, mkdirSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join } from "node:path";
 import { inspectCanonicalLineage } from "./lib/ncos-source-lineage.mjs";
+import { buildBindingReviewQueue } from "./lib/ncos-binding-review-queue.mjs";
 const root=new URL("../",import.meta.url);
 const read=(p)=>readFileSync(new URL(p,root));
 const json=(p)=>JSON.parse(read(p).toString("utf8"));
@@ -48,6 +49,12 @@ const result=inspectCanonicalLineage({sources,bindings,fields,tools,editorial,sc
 for(const slug of missingManifests)result.errors.push({code:"EDITORIAL_MISSING_PROVENANCE_MANIFEST",entity:slug,detail:"Content present but provenance manifest absent"});
 result.counts.errors=result.errors.length;
 result.counts.holds=result.holds.length;
+const countByCode=(items)=>{
+ const counts=new Map();
+ for(const item of items)counts.set(item.code,(counts.get(item.code)||0)+1);
+ return Object.fromEntries([...counts.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));
+};
+const findingCauses={errors:countByCode(result.errors),holds:countByCode(result.holds)};
 const inputFiles=[sourcesPath,itemsPath,toolsPath,...Object.values(schemaPaths),
  ...contentFiles.map(x=>folder+"content/"+x),
  ...[...provenanceFiles].sort().map(x=>folder+"provenance/"+x)];
@@ -66,7 +73,7 @@ const lineages={
   locator:s.locator,integrity:s.integrity
  })),
  lineageGraph:result.edges,
- checks:{errors:result.errors,holds:result.holds},
+ checks:{errors:result.errors,holds:result.holds,countsByCode:findingCauses},
  summary:result.counts,
  atomizedClaimRecordsValidated:0,
  claimValidation:"NOT_VERIFIED_NO_ADMITTED_ATOM_CORPUS_IN_THIS_INPUT",
@@ -78,7 +85,18 @@ const lineages={
 const out=new URL("../audit-evidence/ncos-canonical-source-lineage/",import.meta.url);
 mkdirSync(out,{recursive:true});
 writeFileSync(new URL("lineage-candidate.v1.json",out),JSON.stringify(lineages,null,2)+"\n");
+const bindingReviewQueue = buildBindingReviewQueue({
+ sources,bindings,fields,
+ findings: {errors:result.errors,holds:result.holds},
+ allowedAuthorityClasses: schemas.binding.properties.authority_class.enum
+});
+bindingReviewQueue.inputDigest = lineages.inputDigest;
+bindingReviewQueue.repositorySha = lineages.repositorySha;
+writeFileSync(new URL("binding-review-queue.v1.json",out),JSON.stringify(bindingReviewQueue,null,2)+"\n");
+console.log("NCOS_CKO_BINDING_REVIEW_QUEUE "+JSON.stringify(bindingReviewQueue.counts));
+
 console.log("NCOS_CKO_SOURCE_FIRST_SUMMARY "+JSON.stringify(result.counts));
+console.log("NCOS_CKO_SOURCE_FIRST_CAUSES "+JSON.stringify(findingCauses));
 console.log("NCOS_CKO_SOURCE_FIRST_STATUS "+lineages.status);
 console.log("NCOS_CKO_ATOMIZATION "+lineages.claimValidation);
 if(process.argv.includes("--enforce")&&(lineages.status!=="PASS"||!lineages.atomizedClaimRecordsValidated))
