@@ -142,14 +142,22 @@
     {
       "candidateId": "EXT-CKO-FUGULIN",
       "toolSlug": "fugulin",
-      "title": "COFEN Opinion 1/2024: patient classification systems including Fugulin",
-      "referenceKind": "PROFESSIONAL_GUIDELINE",
-      "url": "https://www.cofen.gov.br/parecer-normativo-no-1-2024-cofen/",
-      "reviewNotes": "Official scope reference only, not proof of original Fugulin instrument or its exact 12 items.",
+      "title": "Fugulin, Gaidzinski and Kurcgant 2005: HU-USP patient classification",
+      "referenceKind": "PRIMARY_STUDY",
+      "url": "https://www.scielo.br/j/rlae/a/C5p9kcnnFkxV3Cm3JJfVQjx/?lang=pt",
+      "reviewNotes": "Brazilian original institutional study; 2007 instrument extension and COFEN guidance are distinct versions. Publisher reports CC BY-NC for article; separate clinical rubric and permission review before product use.",
       "additionalReferences": [
         {
-          "role": "HOSPITAL_PROTOCOL_2025",
-          "url": "https://www.gov.br/ebserh-intensifica-assistencia-a-distancia-como-estrategia-de-combate-a-covid-19/pt-br/hospitais-universitarios/regiao-centro-oeste/hu-ufgd/acesso-a-informacao/pops-protocolos-e-processos/gad/pop-denf-048-classificacao-da-complexidade-da-assistencia-de-enfermagem-conforme-a-escala-de-fugulin-v-2-1.pdf"
+          "role": "SCIENTIFIC_EXTENSION_2007_VERSION_REVIEW",
+          "url": "https://www.scielo.br/j/rlae/a/fSf3XdRSV6JjyPks3qDGRYd/?lang=pt"
+        },
+        {
+          "role": "COFEN_OFFICIAL_CLASSIFICATION_SCOPE",
+          "url": "https://www.cofen.gov.br/parecer-normativo-no-1-2024-cofen/"
+        },
+        {
+          "role": "JOURNAL_LICENSE_CC_BY_NC_NOTICE",
+          "url": "https://revistas.usp.br/rlae/pt_BR/article/view/1996"
         }
       ],
       "discoveryMethod": "EXTERNAL_WEB_BIBLIOGRAPHIC_OR_INSTITUTIONAL_PAGE",
@@ -161,7 +169,7 @@
       "evidenceAtomVerified": false,
       "canPromoteAuthority": false,
       "status": "CANDIDATE_REVIEW_REQUIRED",
-      "referenceYear": 2024
+      "referenceYear": 2005
     },
     {
       "candidateId": "EXT-CKO-DOWNTON",
