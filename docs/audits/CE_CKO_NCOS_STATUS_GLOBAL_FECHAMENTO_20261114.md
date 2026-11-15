@@ -74,3 +74,34 @@ O teste `scripts/ncos-clinical-version-risk.test.mjs` confronta contratos de run
 **Percentual global:** não há denominador de aceites independentes e pesos aprovados para cálculo honesto. Os **7/9 (77,8%)** são **somente CI da PR #1** e **não** o progresso da plataforma. Sem homologação clínica e release confiável, a prontidão de produção é **NO-GO**.
 
 **Próximas ordens de trabalho:** (1) qualificar referências dos 41 instrumentos por versão/pinpoint/licença; (2) reconciliar 16 projeções e 18 claims sem asserção; (3) auditar auth/RLS efetivos; (4) organizar PRs/branches por domínio; (5) recuperar build/deploy canônico; (6) E2E e aceite independente. Não integrar WU-TRIB/contabilidade ao Cânone clínico por semelhança de nome.
+
+
+## 4. Complemento P0 — build Vercel e RLS por papel
+
+**Corte complementar:** 14/11/2026, auditorias não mutantes de build e metadados. O fechamento global continua **NO-GO**.
+
+### Vercel: correção preliminar e causa residual comprovada
+
+- [Workspace PR #71](https://github.com/IndiciumFIN/dev-chatgpt-workspace/pull/71) em `DRAFT`: separou `npm run build` de `db:migrate`; configurou `tanstack-start`, `npm ci` e guard de build; não foi fundida em `main`.
+- Projeto Vercel `dev-chatgpt-workspace` configurado para `framework=tanstack-start`, output override removido. **Somente configuração do projeto, não promoção de release**.
+- Um preview isolado ainda retornou `STATIC_BUILD_NO_OUT_DIR: dist`. O [preflight Github Actions](https://github.com/IndiciumFIN/dev-chatgpt-workspace/actions/runs/43665351445) executou build sem `DATABASE_URL` e sem deploy, provando: `.vercel/output/nitro.json` presente, **`.vercel/output/config.json` ausente**, uma entrada de função e 21 entradas estáticas. Três testes de isolamento do build passaram, o verificador de Build Output API V3 falhou corretamente.
+- Próximo P0: harmonizar versão/preset Nitro v3 com o **Build Output API completo**, emitir `config.json` verificado e rotas/functions corretas em ambiente isolado, testar SSR, server functions, autenticação e rollback no preview. **Proibido** mascarar como pasta `dist` estática (exporia arquivos de função sem SSR).
+- O CI geral do workspace segue com quatro contratos gerados divergentes (`clinical-tools`, `routes`, `components`, `chrome-bands`), falha também observada em `main`. Os testes candidatos de Better Auth reportaram cinco falhas na branch; reconciliar com o owner de auth, sem confundir com o bug de build.
+
+### Supabase: exposição efetiva versus contagem de warnings
+
+Conferência de metadados do projeto `Calculadoras-Smart` em modo somente leitura:
+
+| Schema | Tabelas | RLS desligada | RLS sem policy | SELECT anon | SELECT authenticated |
+|---|---:|---:|---:|---:|---:|
+| `ce_platform` | 96 | 0 | 62 | 0 | 0 |
+| `ce_research_candidate` | 23 | 0 | 23 | 0 | 0 |
+| `public` | 48 | 0 | 25 | 12 | 28 |
+
+Os 245 avisos `rls_enabled_no_policy` no advisor não equivalem a 245 vazamentos: tabela sem policy é negada por padrão às roles sujeitas à RLS, desde que não haja bypass por owner/definer e conforme `GRANT`/schema exposto. Das oito tabelas `public` selecionadas com policies explícitas, todas as oito tinham expressões que referenciavam identidade `auth.uid`/JWT e nenhuma usava `USING true` irrestrito no recorte. Esta conferência **não é um teste de acesso HTTP nem de RLS com identidades diferentes**.
+
+P0 de segurança: testar leitura/gravação de objetos `public` sob `anon` e usuários distintos; confirmar Data API `exposed_schemas`, grants de schema e views definer (há uma view `public` sem `security_invoker=true`, mas não foi constatado `SELECT` direto para `anon` ou `authenticated`); verificar as quatro functions com `search_path` mutável, extensão em `public` e Leak Password Protection desativado indicados pelo Security Advisor. Não alterar policies unilateralmente, nem abrir tabelas para cumprir a contagem de warnings.
+
+Fontes técnicas: [Supabase RLS](https://supabase.com/docs/guides/database/postgres/row-level-security), [Vercel Build Output API](https://vercel.com/docs/build-output-api), [TanStack Start na Vercel](https://vercel.com/kb/guide/deploy-a-tanstack-start-app-to-vercel).
+
+**Go/no-go:** sem documentação de direitos clínicos, RLS real validada por papel e preview SSR funcional, a plataforma permanece em `HOLD_HUMAN / NO-GO`. A PR #71 é uma frente de correção independente e não é autorização de merge das demais branches.
