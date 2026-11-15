@@ -39,6 +39,8 @@ Documentação de referência: [RLS sem policy](https://supabase.com/docs/guides
 ### Vercel — fotografia de deployments, não de todo o portfólio
 
 - `dev-chatgpt-workspace`: os dois deploys de produção mais recentes recuperados estavam em `ERROR`, inclusive `main@dacfaa6bc29f`. [Inspector](https://vercel.com/leivisml-7739s-projects/dev-chatgpt-workspace/FLbQgoLVHjHwR9z45gVHQzd5wgkG)
+  - **Causa reproduzida no log do deployment:** `[STATIC_BUILD_NO_OUT_DIR] No Output Directory named "dist"`, enquanto o build Nitro gerou `.vercel/output/nitro.json`. As configurações do projeto Vercel reportam `framework=vite`; o `vercel.json` no `dev-chatgpt-workspace@dacfaa6b` informa `framework:null` e `buildCommand:npm run build`. Conciliar preset e saída Nitro/TanStack com Build Output API antes do deploy, em vez de criar pasta `dist` vazia. [Vercel Build Output API](https://vercel.com/docs/build-output-api).
+  - **Risco adicional:** `package.json` deste repo define `build` como `vite build && npm run db:migrate`; o log confirma chamada a `db:migrate` no build, embora tenha pulado devido à ausência de `DATABASE_URL`. Separar migração em WO explícita e testada, nunca acoplada ao build de produção. Não alterar credenciais nem executar migrations para diagnosticar.
 - `ce-site-institucional`: o deploy de produção mais recente recuperado estava `BLOCKED`. [Inspector](https://vercel.com/leivisml-7739s-projects/ce-site-institucional/62RRaPLTishFxJ3XscBXULdyf7bJ)
 - A conta listou **33 projetos Vercel**, inclusive múltiplos pilotos. Não inferir destes dois projetos que não exista outro site em produção; identificar o **deployment canônico único** antes de promover.
 - Build SPA/Chromium PASS na PR não comprova deploy com auth, RLS, migrações e rollback.
