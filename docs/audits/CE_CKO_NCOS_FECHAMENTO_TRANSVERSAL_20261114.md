@@ -68,3 +68,36 @@
 7. Aceite formal distinto do operador, auditor/checker e responsável clínico/jurídico quando exigido.
 
 **Enquanto qualquer controle obrigatório estiver aberto: `NO-GO`.**
+
+
+## 6. Remediações adicionais executadas na PR #1 — corte de 2026-11-14
+
+- Inventário de rotas atualizado por *Git blob SHA*: 53 rotas atuais, 20 entradas na fonte histórica `dev-chatgpt-workspace@7ed49913`, 18 bytes de rota divergentes e dois iguais. O registro novo é `audit/branch-canonicalization/ncos-route-current-sha-observation-20261114.v1.json`; o histórico original permanece intacto. Sua interpretação não é aprovação: `HOLD_ROLE_TEMPLATE_AND_ISOLATION`, 0 autorizadas.
+- O diagnóstico de build NCOS passou após o verificador distinguir histórico de estado atual, mantendo `releaseGate=BLOCKED`. O teste `scripts/test-route-registry.test.mjs` valida os 53 hashes, a preservação dos 20 pins e a não aprovação.
+- Os 46 *authority bindings* e 32 definições de campo antes marcados `EVIDENCE_BOUND`, mesmo sem pacote de evidência, passaram para `HOLD_HUMAN` na fonte geradora `src/lib/tools/governance.ts` e no contrato derivado. O gate `check-generated-fresh` agora confronta também `tool-sources` e `tool-bindings`, para prevenir drift silencioso.
+- O validador `scripts/lib/ncos-source-lineage.mjs` reprova `BINDING_EVIDENCE_STATUS_WITHOUT_BUNDLE` e `FIELD_EVIDENCE_STATUS_WITHOUT_BUNDLE`; testes negativos adicionados. **Nenhuma evidência clínica foi inventada.**
+
+### 6.1 Causas exatas do verificador fonte-primeiro
+
+Evidência GitHub Actions: [NCOS canonical evidence and editorial lineage](https://github.com/IndiciumFIN/raven-beam-lion-lagoon/actions/runs/43656069272), cuja execução permanece `HOLD_HUMAN`. O verificador mediu **589 erros** e **790 HOLDs** em 6 fontes candidatas, 320 authority bindings, 32 campos, 52 ferramentas e 27 páginas editoriais.
+
+| Tipo | Quantidade | Ação exigida (sem inventar autoridade) |
+| --- | ---: | --- |
+| `NOT_IN_CANONICAL_VOCABULARY` | 310 | Reclassificar cada `authority_class=CLINICAL` somente após identificar a fonte e o papel da autoridade. **274** desses bindings não possuem fonte; os demais **36** referem-se a 8 Aldrete/CFM, 11 Braden/estudo, 9 Morse/guia e 8 Apgar/estudo. Não mapear `CLINICAL` automaticamente para `CLINICAL_EVIDENCE`. |
+| `BINDING_WITHOUT_SOURCE` | 278 | **274** clínicos de escalas sem fonte qualificada; quatro contextuais `INTERNAL_NONCLINICAL` que precisam da decisão apropriada de vínculo à política interna ou exceção justificada, compatível com o schema. |
+| `SOURCE_PINPOINT_MISSING` | 1 | Fórmula clássica de gotejamento sem URI original; procurar fonte confiável e licença antes de preencher. |
+| `BINDING_VALIDITY_INCOMPLETE` | 320 HOLD | Preencher vigência `applicable_from` com evidência de cada fonte, não com a data do commit. |
+| `BINDING_WITHOUT_ATOM_EVIDENCE` | 320 HOLD | Vincular fragmento, átomo, revisão de direitos e pacote de evidência verificável por campo. |
+| `TOOL_EVIDENCE_NOT_BOUND` / `TOOL_SOURCE_IDS_NOT_RECONCILED` | 52 / 51 HOLD | Reconciliar escopos, fontes, limitações, testes e vetores das 52 ferramentas. |
+| `EDITORIAL_ORIGIN_NOT_CANONICAL_SOURCE_BINDING` | 25 HOLD | Preservar origem editorial separadamente da fonte normativa/claim. |
+| Fonte com `SOURCE_INTEGRITY_NOT_VERIFIED` / `SOURCE_SNAPSHOT_NOT_AVAILABLE` | 6 / 6 HOLD | Os seis SHA-256 permanecem zerados; capturar originais autorizados, versão, data, direitos e hash real. |
+
+Os demais HOLDs incluem seis extensões legadas fora do schema, duas páginas editoriais sem locator e duas fontes com direitos sujeitos a revisão. Nenhuma dessas pendências foi removida para produzir CI verde.
+
+### 6.2 Próximas WOs independentes para fechamento
+
+- **WO-CKO-SOURCE-01:** recuperar fonte oficial e direitos das seis entradas, começando pela fonte de gotejamento sem URI. Provar SHA-256 do arquivo original, edição e trecho exato; autor da evidência distinto do homologador.
+- **WO-CKO-BINDING-02:** reconciliar os 274 bindings clínicos sem fonte e os 36 com `authority_class` ambíguo; não definir vigência por aproximação.
+- **WO-CKO-EVIDENCE-03:** vincular os 320 bindings a átomos verificados e testes de decisão (positivos, negativos e limites), preservando `HOLD_HUMAN` até aprovação profissional.
+- **WO-CKO-ROUTES-04:** revisar por papel/template os 53 atuais, comparando 18 divergências de arquivo contra o snapshot histórico. O inventário SHA aprovado estruturalmente não habilita a rota.
+- **WO-CKO-LEGAL-05:** confirmar licenças dos originais, conteúdos educativos, normas e direitos por operação, antes de qualquer armazenamento público de material protegido.
