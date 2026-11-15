@@ -24,6 +24,8 @@ jobs:
           node-version: "22"
       - name: Validate negative examples for normative and editorial evidence
         run: node --test scripts/ncos-source-lineage.test.mjs
+      - name: Test deterministic field-by-field remediation queue (no admissions)
+        run: node --test scripts/ncos-binding-review-queue.test.mjs
       - name: Generate field-by-field CKO vocabulary drift proposal without rewriting source
         run: node scripts/ncos-cko-schema-drift.mjs
       - name: Reconcile actual CKO source-first evidence and fail closed
