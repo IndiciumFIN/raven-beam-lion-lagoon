@@ -28,6 +28,10 @@ jobs:
         run: node --test scripts/ncos-binding-review-queue.test.mjs
       - name: Generate field-by-field CKO vocabulary drift proposal without rewriting source
         run: node scripts/ncos-cko-schema-drift.mjs
+      - name: Reject auto-approval of externally found bibliographic sources
+        run: node --test scripts/ncos-external-source-candidates.test.mjs
+      - name: Derive external reference leads for field review, without rewriting CKO sources
+        run: node scripts/ncos-external-source-candidates.mjs --enforce-research-coverage
       - name: Reconcile actual CKO source-first evidence and fail closed
         run: node scripts/ncos-source-lineage-audit.mjs --enforce
       - name: Retain candidate lineages and blockers even if gate fails
