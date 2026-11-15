@@ -101,3 +101,16 @@ Os demais HOLDs incluem seis extensões legadas fora do schema, duas páginas ed
 - **WO-CKO-EVIDENCE-03:** vincular os 320 bindings a átomos verificados e testes de decisão (positivos, negativos e limites), preservando `HOLD_HUMAN` até aprovação profissional.
 - **WO-CKO-ROUTES-04:** revisar por papel/template os 53 atuais, comparando 18 divergências de arquivo contra o snapshot histórico. O inventário SHA aprovado estruturalmente não habilita a rota.
 - **WO-CKO-LEGAL-05:** confirmar licenças dos originais, conteúdos educativos, normas e direitos por operação, antes de qualquer armazenamento público de material protegido.
+
+
+## 7. Fila determinística de revisão por campo (sem homologação)
+
+A validação visual da PR #1 passou após fixar `ubuntu-24.04` no runner de Playwright, sem desabilitar captura de tela ou veredito de navegador. Evidência: [GitHub Actions visual](https://github.com/IndiciumFIN/raven-beam-lion-lagoon/actions/runs/43657826527). No corte `98f2709c8f3a`, 7 de 9 workflows passaram; linhagem e universo de fontes permaneceram `HOLD_HUMAN`.
+
+Para substituir listas dispersas por unidades de trabalho verificáveis, a PR agora gera **`audit-evidence/ncos-canonical-source-lineage/binding-review-queue.v1.json`** em cada auditoria da linhagem. A função pura `buildBindingReviewQueue`, em `scripts/lib/ncos-binding-review-queue.mjs`, deriva exclusivamente das 6 fontes, 320 bindings, 32 field definitions, achados e enum do schema canônico. Cada item contém ID, campo, ferramenta, fontes observadas, definições relacionadas, falhas, vigência, evidências declaradas, prioridade e passos pendentes.
+
+O arquivo mantém `inputDigest` e SHA do commit de execução, sendo preservado como artefato do workflow mesmo quando `--enforce` falha. Os quatro testes negativos específicos verificam ausência de fonte, classe incompatível, snapshot/rights pendentes e proibição de autoaprovação. Contagens históricas do HEAD anterior: 310 classes incompatíveis, 278 sem fonte, 320 sem vigência e 320 sem pacote; as contagens do novo artefato devem ser lidas do CI, não presumidas.
+
+**Regras de interpretação:** todos os itens emitidos são `HOLD_HUMAN`, com `authority_class_candidate=null`, `admitted=false`, `rightsApproved=false`, `evidenceVerified=false`, `releaseEligible=false`. A mera presença de `source_id`, URI, hash textual ou ID de pacote não prova licença, integridade do arquivo original, claim validado ou revisão independente. A lista facilita execução de WO por campo, mas não remove nenhum bloqueio clínico, jurídico, de segurança ou de publicação.
+
+**Dependências da próxima revisão:** para cada campo, identificar fonte adequada e versão, provar vigência e pinpoint, capturar hash de bytes autorizados, revisar direitos e vincular evidência atomizada; em seguida, obter validação clínica e jurídica independente. Enquanto o gate de linhagem ou direitos permanecer em falha, `DRAFT / NO-GO`, sem merge nem migração.
