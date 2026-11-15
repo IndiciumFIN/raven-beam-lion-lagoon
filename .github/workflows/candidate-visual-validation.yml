@@ -20,7 +20,10 @@ permissions:
 
 jobs:
   visual:
-    runs-on: ubuntu-latest
+    # Pin Ubuntu 24.04: the 26.04 runner lacks Playwright apt font packages
+    # (fonts-freefont-ttf / fonts-unifont) required by --with-deps.
+    # Preserve real browser verification; never bypass screenshots or verdict.
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     env:
       VITE_AUTH_ENABLED: "false"
