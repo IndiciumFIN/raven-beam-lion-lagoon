@@ -30,6 +30,8 @@ jobs:
         run: node scripts/ncos-cko-schema-drift.mjs
       - name: Reject auto-approval of externally found bibliographic sources
         run: node --test scripts/ncos-external-source-candidates.test.mjs
+      - name: Reject unreviewed Fugulin SOFA2 and Waterlow instrument version or rights changes
+        run: node --test scripts/ncos-clinical-version-risk.test.mjs
       - name: Derive external reference leads for field review, without rewriting CKO sources
         run: node scripts/ncos-external-source-candidates.mjs --enforce-research-coverage
       - name: Reconcile actual CKO source-first evidence and fail closed
