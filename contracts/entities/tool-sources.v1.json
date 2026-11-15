@@ -169,9 +169,9 @@
         "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "snapshot_ref": "PENDING_SNAPSHOT"
       },
+      "license_ref": "PERMISSION_REVIEW",
       "language": "pt-BR",
-      "citacao": "COREN-SP. Boas práticas: Cálculo seguro. Volume II: Cálculo e diluição de medicamentos. São Paulo: COREN-SP, maio de 2011, p. 17.",
-      "license_ref": "PERMISSION_REVIEW"
+      "citacao": "COREN-SP. Boas práticas: Cálculo seguro. Volume II: Cálculo e diluição de medicamentos. São Paulo: COREN-SP, maio de 2011, p. 17."
     }
   ]
 }
