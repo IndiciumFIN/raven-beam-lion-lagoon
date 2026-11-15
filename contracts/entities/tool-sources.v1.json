@@ -150,26 +150,28 @@
       "canonical_id": "SRC-GOTEJAMENTO-FORMULA-CLASSICA",
       "version": "1.0.0",
       "status": "REVIEW_REQUIRED",
-      "updated_at": "2026-10-22",
+      "updated_at": "2026-11-14",
       "provenance_refs": [
-        "SRC-CKO-POL-UT-001"
+        "SRC-CKO-POL-UT-001",
+        "HOLD_RIGHTS_COREN_SP_2011"
       ],
       "source_type": "STANDARD",
-      "title": "Fórmula clássica de gotejamento",
-      "authority": "Prática assistencial de gotejamento",
+      "title": "Boas práticas: Cálculo seguro — Volume II: Cálculo e diluição de medicamentos (gotejamento)",
+      "authority": "COREN-SP",
       "locator": {
-        "uri": "",
-        "pinpoint": "gts/min = (volume em mL × fator do equipo) / tempo em minutos"
+        "uri": "https://biblioteca.cofen.gov.br/wp-content/uploads/2018/04/boas-praticas-calculo-seguro-volume-2-calculo-e-diluicao-de-medicamentos.pdf",
+        "pinpoint": "Volume II, p. 17: fórmulas de gotas e microgotas/min para tempo em minutos; fator do equipo deve ser verificado."
       },
-      "rights": "PUBLIC_DOMAIN",
+      "rights": "RESTRICTED",
       "jurisdiction": "BR",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-11-14",
       "integrity": {
         "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "snapshot_ref": "PENDING_SNAPSHOT"
       },
       "language": "pt-BR",
-      "citacao": "Fórmula clássica de gotejamento: gotas/min = (volume em mL × fator do equipo) / tempo em minutos."
+      "citacao": "COREN-SP. Boas práticas: Cálculo seguro. Volume II: Cálculo e diluição de medicamentos. São Paulo: COREN-SP, maio de 2011, p. 17.",
+      "license_ref": "PERMISSION_REVIEW"
     }
   ]
 }
