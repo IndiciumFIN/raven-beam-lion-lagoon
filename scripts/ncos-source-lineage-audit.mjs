@@ -8,6 +8,7 @@ import { readFileSync, readdirSync, mkdirSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join } from "node:path";
 import { inspectCanonicalLineage } from "./lib/ncos-source-lineage.mjs";
+import { buildBindingReviewQueue } from "./lib/ncos-binding-review-queue.mjs";
 const root=new URL("../",import.meta.url);
 const read=(p)=>readFileSync(new URL(p,root));
 const json=(p)=>JSON.parse(read(p).toString("utf8"));
@@ -84,6 +85,16 @@ const lineages={
 const out=new URL("../audit-evidence/ncos-canonical-source-lineage/",import.meta.url);
 mkdirSync(out,{recursive:true});
 writeFileSync(new URL("lineage-candidate.v1.json",out),JSON.stringify(lineages,null,2)+"\n");
+const bindingReviewQueue = buildBindingReviewQueue({
+ sources,bindings,fields,
+ findings: {errors:result.errors,holds:result.holds},
+ allowedAuthorityClasses: schemas.binding.properties.authority_class.enum
+});
+bindingReviewQueue.inputDigest = lineages.inputDigest;
+bindingReviewQueue.repositorySha = lineages.repositorySha;
+writeFileSync(new URL("binding-review-queue.v1.json",out),JSON.stringify(bindingReviewQueue,null,2)+"\n");
+console.log("NCOS_CKO_BINDING_REVIEW_QUEUE "+JSON.stringify(bindingReviewQueue.counts));
+
 console.log("NCOS_CKO_SOURCE_FIRST_SUMMARY "+JSON.stringify(result.counts));
 console.log("NCOS_CKO_SOURCE_FIRST_CAUSES "+JSON.stringify(findingCauses));
 console.log("NCOS_CKO_SOURCE_FIRST_STATUS "+lineages.status);
