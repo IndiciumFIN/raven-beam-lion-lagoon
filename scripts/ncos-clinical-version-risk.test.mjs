@@ -15,12 +15,17 @@ test("Fugulin 12-item candidate is explicitly versioned, not the nine-item varia
  const f=tool("fugulin");
  assert.ok(f,"Fugulin tool must exist");
  assert.equal(f.criteria?.length,12);
- const ids=new Set(f.criteria.map(c=>c.id));
+ // loadToolContracts exposes criterion IDs and the overall band range,
+ // not the original choice objects. Test the authentic runtime contract, not
+ // assumptions from the authoring-only frozenScales TypeScript structure.
+ const ids=new Set(f.criteria);
  assert.equal(ids.size,12);
  assert.ok(ids.has("curativo")&&ids.has("tempo_curativo")&&ids.has("pele"));
- for(const c of f.criteria)assert.deepEqual(c.choices.map(x=>x.value),[1,2,3,4]);
- assert.deepEqual(f.bands.map(x=>[x.min,x.max]),[[12,17],[18,22],[23,28],[29,34],[35,48]]);
- assert.equal(missingSourceFor("fugulin").length,12);
+ assert.deepEqual(f.faixa,{min:12,max:48});
+ const bindings=missingSourceFor("fugulin");
+ assert.equal(bindings.length,12);
+ assert.deepEqual([...ids].sort(),bindings.map(b=>b.field_path.split(".").at(-1)).sort());
+ assert.ok(bindings.every(b=>b.evidence_bundle_ids?.length===0));
  assert.equal(candidate("fugulin")?.referenceYear,2005);
  assert.ok(candidate("fugulin")?.additionalReferences.some(r=>
  r.role==="SCIENTIFIC_EXTENSION_2007_VERSION_REVIEW"));
